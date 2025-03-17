@@ -1,0 +1,30 @@
+:root {
+    --primary-bgclr: white;
+    --secondary-bgclr: rgb(42, 42, 150);
+
+    --primary-txtclr: black;
+    --secondary-txtclr: white;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+
+button {
+    cursor: pointer;
+    border-style: none;
+    font-size: 1.2rem;
+}
+
+button:focus {
+    outline: none;
+}
