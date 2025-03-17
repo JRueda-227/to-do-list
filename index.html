@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script defer src="main.js"></script></head>
+<body>
+    <dialog id="modal">
+        <form method="dialog" id="list-form">
+            <input type="text" id="input" name="input">
+            <button id="list-save-btn" class="save-btn">+</button>
+        </form>
+    </dialog>
+    <dialog id="todo-modal">
+        <form method="dialog" id="todo-form">
+            <div>
+                <label for="todo-title">Title</label>
+                <input type="text" id="todo-title" name="title">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+            <div>
+                <label for="due-date">Due</label>
+                <input type="date" id="due-date" name="due-date">
+            </div>
+            <div>
+                <div class="priority-picker">
+                    <label>Priority</label>
+                    <div class="dropdown">
+                      <button id="selected-priority" class="priority-btn" style="background-color: #ff0000;"></button>
+                      <div class="dropdown-content">
+                        <div class="priority-option" data-color="#ff0000" style="background-color: #ff0000;"></div>
+                        <div class="priority-option" data-color="#ffa500" style="background-color: #ffa500;"></div>
+                        <div class="priority-option" data-color="#008000" style="background-color: #008000;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <input type="hidden" id="priority" name="priority" value="#ff0000">
+            </div>
+            <div id="form-btns">
+                <button id="todo-save-btn" class="save-btn">+</button>
+                <button id="remove-todo-btn">-</button>
+            </div>
+        </form>
+    </dialog>
+    <div id="sidebar">
+        <div class="sidebar-section">
+            <ul id="general-lists" class="list-buttons">
+                <li><button id="all-lists-btn" class="list">All</button></li>
+            </ul>
+        </div>
+        <div class="sidebar-section">
+            <div class="list-header">
+                <h2 id="my-list-title">My Lists</h2>
+                <button id="add-list-btn">+</button>
+            </div>
+            <ul id="my-lists" class="list-buttons"></ul>
+        </div>
+    </div>
+    <div id="main">
+        <div id="list-container"></div>
+    </div>
+</body>
+</html>
